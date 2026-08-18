@@ -36,7 +36,7 @@ export const Overlay = () => {
               <circle cx="15" cy="20" r="10" stroke="#0682ff"/>
               <circle cx="15" cy="20" r="6" stroke="#0682ff" strokeWidth="3"/>
           </svg>    
-          <span className="text-2xl text-primary-700 font-bold mt-1.5">RentVerse</span>             
+          <span className="text-2xl text-primary-700 font-bold mt-1.5 dark:text-primary-300">RentVerse</span>             
         </Link>
         <div className="bg-gradient-to-t from-white/90 pt-20 pb-10 p-4 flex items-center flex-col text-center">
           <h1 className="text-2xl lg:text-5xl font-extrabold">

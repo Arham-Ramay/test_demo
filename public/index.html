@@ -9,6 +9,19 @@
     <script>navigator.serviceWorker.register("/service-worker.js")</script> 
     <link rel="manifest" href="/manifest.json" />  
     <title>RentVerse</title>
+    <!-- Applies the stored/OS theme before first paint so dark mode never flashes white. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('rentverse-theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

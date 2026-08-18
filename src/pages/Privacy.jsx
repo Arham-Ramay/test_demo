@@ -114,7 +114,7 @@ We aim to respond to all inquiries within 48 hours.`
   ];
 
   return (
-    <div className="min-h-screen bg-secondary-50 py-16">
+    <div className="min-h-screen bg-secondary-50 py-16 dark:bg-secondary-900">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -122,11 +122,11 @@ We aim to respond to all inquiries within 48 hours.`
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold text-center mb-4">Privacy Policy</h1>
-          <p className="text-secondary-600 text-center mb-12">
+          <p className="text-secondary-600 text-center mb-12 dark:text-secondary-300">
             Last updated: March 15, 2024
           </p>
 
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <div className="bg-white rounded-lg shadow-md p-8 dark:bg-secondary-800 dark:shadow-none">
             <div className="space-y-8">
               {sections.map((section, index) => (
                 <motion.div
@@ -137,7 +137,7 @@ We aim to respond to all inquiries within 48 hours.`
                   transition={{ delay: index * 0.1 }}
                 >
                   <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-                  <div className="text-secondary-600 whitespace-pre-line">
+                  <div className="text-secondary-600 whitespace-pre-line dark:text-secondary-300">
                     {section.content}
                   </div>
                 </motion.div>

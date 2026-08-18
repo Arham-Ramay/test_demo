@@ -11,6 +11,8 @@
   
   body {
     @apply font-sans text-secondary-800 bg-secondary-50;
+    @apply dark:text-secondary-100 dark:bg-secondary-900;
+    @apply transition-colors duration-200;
   }
 }
 
@@ -25,13 +27,22 @@
   
   .btn-secondary {
     @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-primary-700 bg-primary-100 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+    @apply dark:text-primary-200 dark:bg-secondary-700 dark:hover:bg-secondary-600;
   }
   
   .input {
     @apply block w-full rounded-md border-secondary-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+    @apply dark:bg-secondary-800 dark:border-secondary-600 dark:text-secondary-100 dark:placeholder-secondary-400;
   }
   
   .card {
     @apply bg-white rounded-lg shadow-md overflow-hidden;
+    @apply dark:bg-secondary-800 dark:shadow-none dark:border dark:border-secondary-700;
+  }
+
+  /* Surface used by every elevated block (cards, panels, accordions) so light
+     and dark stay in sync from one place instead of per-component overrides. */
+  .surface {
+    @apply bg-white dark:bg-secondary-800 dark:border dark:border-secondary-700 dark:shadow-none;
   }
 }

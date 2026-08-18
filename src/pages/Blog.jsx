@@ -93,7 +93,7 @@ function Blog() {
   });
 
   return (
-    <div className="min-h-screen bg-secondary-50 py-16">
+    <div className="min-h-screen bg-secondary-50 py-16 dark:bg-secondary-900">
       <div className="container">
         {/* Header */}
         <motion.div
@@ -102,14 +102,14 @@ function Blog() {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <h1 className="text-4xl font-bold mb-4">Real Estate & Crypto Insights</h1>
-          <p className="text-secondary-600">
+          <p className="text-secondary-600 dark:text-secondary-300">
             Stay updated with the latest trends in real estate investment, cryptocurrency, and blockchain technology.
           </p>
         </motion.div>
 
         {/* Search and Filter */}
         <div className="max-w-4xl mx-auto mb-12">
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white rounded-lg shadow-md p-6 dark:bg-secondary-800 dark:shadow-none">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">
                 <div className="relative">
@@ -149,7 +149,7 @@ function Blog() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-secondary-800 dark:shadow-none"
             >
               <Link to={`/blog/${post.slug}`}>
                 <div className="relative h-48">
@@ -158,7 +158,7 @@ function Blog() {
                     alt={post.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-primary-600">
+                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-primary-600 dark:bg-secondary-800 dark:text-primary-400">
                     {categories.find(c => c.id === post.category)?.name}
                   </div>
                 </div>
@@ -166,10 +166,10 @@ function Blog() {
                   <h2 className="text-xl font-semibold mb-3 hover:text-primary-600 transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-secondary-600 mb-4">
+                  <p className="text-secondary-600 mb-4 dark:text-secondary-300">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center text-sm text-secondary-500">
+                  <div className="flex items-center text-sm text-secondary-500 dark:text-secondary-400">
                     <FiUser className="mr-2" />
                     <span className="mr-4">{post.author}</span>
                     <FiClock className="mr-2" />

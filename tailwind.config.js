@@ -1,4 +1,7 @@
 export default {
+  // Class-based dark mode: we toggle `dark` on <html> from ThemeContext,
+  // which lets us keep the OS preference as the default without locking users into it.
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,jsx}"

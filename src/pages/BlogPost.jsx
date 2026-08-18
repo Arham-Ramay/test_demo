@@ -49,7 +49,7 @@ function BlogPost() {
   };
 
   return (
-    <div className="min-h-screen bg-secondary-50">
+    <div className="min-h-screen bg-secondary-50 dark:bg-secondary-900">
       {/* Hero Section */}
       <div className="relative h-[400px]">
         <img
@@ -99,7 +99,7 @@ function BlogPost() {
             transition={{ delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <div className="bg-white rounded-lg shadow-md p-8">
+            <div className="bg-white rounded-lg shadow-md p-8 dark:bg-secondary-800 dark:shadow-none">
               <div 
                 className="prose prose-lg max-w-none"
                 dangerouslySetInnerHTML={{ __html: post.content }}
@@ -115,7 +115,7 @@ function BlogPost() {
           >
             <div className="space-y-6">
               {/* Share */}
-              <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="bg-white rounded-lg shadow-md p-6 dark:bg-secondary-800 dark:shadow-none">
                 <h3 className="text-lg font-semibold mb-4 flex items-center">
                   <FiShare2 className="mr-2" />
                   Share this article
@@ -134,7 +134,7 @@ function BlogPost() {
               </div>
 
               {/* Tags */}
-              <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="bg-white rounded-lg shadow-md p-6 dark:bg-secondary-800 dark:shadow-none">
                 <h3 className="text-lg font-semibold mb-4 flex items-center">
                   <FiTag className="mr-2" />
                   Tags
@@ -143,7 +143,7 @@ function BlogPost() {
                   {post.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-secondary-100 text-secondary-600 rounded-full text-sm"
+                      className="px-3 py-1 bg-secondary-100 text-secondary-600 rounded-full text-sm dark:text-secondary-300 dark:bg-secondary-700"
                     >
                       {tag}
                     </span>

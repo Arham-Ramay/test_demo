@@ -12,9 +12,9 @@ function App() {
       }, 1000);
   }, []);
   return (
-    <div className="absolute z-50 inset-0 bg-white">
+    <div className="absolute z-50 inset-0 bg-white dark:bg-secondary-800">
       {loading ? 
-        <div className="absolute z-50 inset-0 w-full h-full flex justify-center items-center text-primary-700 text-xl md:text-3xl text-center font-bold ">Please wait...</div> 
+        <div className="absolute z-50 inset-0 w-full h-full flex justify-center items-center text-primary-700 text-xl md:text-3xl text-center font-bold dark:text-primary-300">Please wait...</div> 
       : null}
       <Leva hidden />
       <Overlay />

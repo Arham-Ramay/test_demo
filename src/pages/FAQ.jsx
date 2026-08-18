@@ -186,7 +186,7 @@ function FAQ() {
  
 
   return (
-    <div className="min-h-screen bg-secondary-50 py-16">
+    <div className="min-h-screen bg-secondary-50 py-16 dark:bg-secondary-900">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -194,14 +194,14 @@ function FAQ() {
           className="max-w-3xl mx-auto"
         >
           <h1 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h1>
-          <p className="text-secondary-600 text-center mb-12">
+          <p className="text-secondary-600 text-center mb-12 dark:text-secondary-300">
             Find answers to common questions about our platform, cryptocurrency payments, and real estate investment.
           </p>
 
           <div className="space-y-8">
             {faqSections.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <h2 className="text-xl font-semibold p-6 bg-secondary-50">
+              <div key={sectionIndex} className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-secondary-800 dark:shadow-none">
+                <h2 className="text-xl font-semibold p-6 bg-secondary-50 dark:bg-secondary-900">
                   {section.title}
                 </h2>
                 <div className="divide-y divide-secondary-100">
@@ -227,7 +227,7 @@ function FAQ() {
                             transition={{ duration: 0.3 }}
                             className="overflow-hidden"
                           >
-                            <p className="mt-4 text-secondary-600">
+                            <p className="mt-4 text-secondary-600 dark:text-secondary-300">
                               {item.answer}
                             </p>
                           </motion.div>

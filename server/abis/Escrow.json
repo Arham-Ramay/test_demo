@@ -1,0 +1,19 @@
+[
+  "function nftAddress() view returns (address)",
+  "function seller() view returns (address)",
+  "function inspector() view returns (address)",
+  "function lender() view returns (address)",
+  "function isListed(uint256 nftID) view returns (bool)",
+  "function purchasePrice(uint256 nftID) view returns (uint256)",
+  "function escrowAmount(uint256 nftID) view returns (uint256)",
+  "function buyer(uint256 nftID) view returns (address)",
+  "function inspectionPassed(uint256 nftID) view returns (bool)",
+  "function approval(uint256 nftID, address approver) view returns (bool)",
+  "function getBalance() view returns (uint256)",
+  "function list(uint256 nftID, address buyer, uint256 purchasePrice, uint256 escrowAmount) payable",
+  "function depositEarnest(uint256 nftID) payable",
+  "function updateInspectionStatus(uint256 nftID, bool passed)",
+  "function approveSale(uint256 nftID)",
+  "function finalizeSale(uint256 nftID)",
+  "function cancelSale(uint256 nftID)"
+]

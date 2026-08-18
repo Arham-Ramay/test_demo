@@ -1,2 +1,12 @@
 /node_modules
 package-lock.json
+# local env files (never commit — contains keys)
+.config.env
+*.config.env
+
+# hardhat build output
+/artifacts
+/cache
+
+# CRA build output
+/build
